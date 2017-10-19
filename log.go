@@ -1,20 +1,20 @@
 package log
 
 import (
-	"os"
 	ilog "log"
+	"os"
 )
 
 var (
-	debug   *ilog.Logger
-	info    *ilog.Logger
-	error   *ilog.Logger
+	debug *ilog.Logger
+	info  *ilog.Logger
+	error *ilog.Logger
 )
 
 var ShowDebug bool
 
 func init() {
-	debug = ilog.New(os.Stdout, "", 0)
+	debug = ilog.New(os.Stdout, "[debug] ", 0)
 	info = ilog.New(os.Stdout, "", 0)
 	error = ilog.New(os.Stderr, "", 0)
 }
